@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>qwiki</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="wyltkm.js"></script>
+        <style>
+            body {
+                width: 480px;
+                margin: 0 auto;
+                margin-top: 20%;
+            }
+        </style>
+        <script type="text/ecmascript">
+            $(document).ready(function() {
+                new Wyltkm('/gist.json');
+            });
+        </script>
+    </head>
+    <body>
+        <div id="wyltkm"/>
+    </body>
+</html>
