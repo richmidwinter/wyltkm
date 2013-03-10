@@ -8,5 +8,5 @@
       "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/McPherson_Square_pylon.jpg/114px-McPherson_Square_pylon.jpg"
     }
   ],
-  "audio": "http://localhost:8080/mcpherson.ogg"
+  "audio": "https://raw.github.com/richmidwinter/wyltkm/master/mcpherson.ogg"
 }
