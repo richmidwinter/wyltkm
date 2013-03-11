@@ -1,0 +1,12 @@
+{
+  "frames": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/12-07-12-wikimania-wdc-by-RalfR-010.jpg/290px-12-07-12-wikimania-wdc-by-RalfR-010.jpg"
+    },{
+      "src": "https://maps.googleapis.com/maps/api/staticmap?center=1400+I+Street,Northwest+Washington,D.C.+20005&zoom=13&size=600x300&sensor=false"
+    },{
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/McPherson_Square_pylon.jpg/114px-McPherson_Square_pylon.jpg"
+    }
+  ],
+  "audio": "https://raw.github.com/richmidwinter/wyltkm/master/mcpherson.ogg"
+}
