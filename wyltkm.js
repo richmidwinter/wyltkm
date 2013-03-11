@@ -31,7 +31,12 @@ function Animate() {
         canvasY = CANVAS_HEIGHT - (2 * PADDING);
         farX = 0;
 
-        if (decrement-- <= -(images[0].width +images[1].width +images[2].width - (CANVAS_WIDTH + 2*PADDING))) {
+        var imageWidths = 0;
+        for (var i = 0; i<images.length; i++) {
+            imageWidths += images[i].width;
+        }
+
+        if (decrement-- <= -(imageWidths - (CANVAS_WIDTH + 2*PADDING))) {
             $("#footer").css("visibility", "visible");
             return;
         }
