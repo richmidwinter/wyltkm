@@ -3,9 +3,9 @@
     {
       "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Broadway_tower_edit.jpg/320px-Broadway_tower_edit.jpg"
     },{
-      "src": "https://upload.wikimedia.org/wikipedia/commons/0/0c/James_Wyatt.JPG"
+      "src": "https://maps.googleapis.com/maps/api/staticmap?center=Broadway+Tower,Worcestershire&zoom=13&size=500x300&sensor=false"
     },{
-      "src": "https://maps.googleapis.com/maps/api/staticmap?center=Broadway+Tower,Worcestershire&zoom=13&size=600x300&sensor=false"
+      "src": "https://upload.wikimedia.org/wikipedia/commons/0/0c/James_Wyatt.JPG"
     },{
       "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Broadway_Tower_2012.jpg/320px-Broadway_Tower_2012.jpg"
     }
