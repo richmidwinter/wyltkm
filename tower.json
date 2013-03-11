@@ -1,0 +1,18 @@
+{
+  "frames": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Broadway_tower_edit.jpg/320px-Broadway_tower_edit.jpg"
+    },{
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Worcestershire_UK_location_map.svg/271px-Worcestershire_UK_location_map.svg.png"
+    },{
+      "src": "https://maps.googleapis.com/maps/api/staticmap?center=Broadway+Tower,Worcestershire&zoom=13&size=600x300&sensor=false"
+    },{
+      "src": "https://upload.wikimedia.org/wikipedia/commons/0/0c/James_Wyatt.JPG"
+    },{
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Broadway_Tower_2012.jpg/320px-Broadway_Tower_2012.jpg"
+    },{
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Armstrong_Whitworth_Whitley_in_flight_c1940.jpg/300px-Armstrong_Whitworth_Whitley_in_flight_c1940.jpg"
+    }
+  ],
+  "audio": "https://raw.github.com/richmidwinter/wyltkm/master/tower.ogg"
+}
