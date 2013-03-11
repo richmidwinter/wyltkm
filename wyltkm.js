@@ -57,7 +57,7 @@ function UI(root, config) {
     var drawCanvas = function() {
         $('#' +root).append($('<div class="preload"></div><div class="wrapper"><canvas class="canvas"></canvas></div>'));
 
-        $('#' +root +' .wrapper').append($('<div class="footer"><p><a href="https://github.com/richmidwinter">Would you like to know more?</a></p></div>'));
+        $('#' +root +' .wrapper').append($('<div class="footer"><p><a href="http://richmidwinter.github.com/wyltkm/">Would you like to know more?</a></p></div>'));
     };
 
     var showStart = function() {
