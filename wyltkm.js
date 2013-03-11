@@ -33,7 +33,7 @@ function Animate() {
 
         var imageWidths = 0;
         for (var i = 0; i<images.length; i++) {
-            imageWidths += images[i].width;
+            imageWidths += images[i].width*(canvasY/images[i].height);
         }
 
         if (decrement-- <= -(imageWidths - (CANVAS_WIDTH + 2*PADDING))) {
