@@ -9,17 +9,20 @@
             body {
                 width: 480px;
                 margin: 0 auto;
-                margin-top: 20%;
+            }
+            .wyltkm {
+                margin-top: 40px;
             }
         </style>
         <script type="text/ecmascript">
             $(document).ready(function() {
-                //new Wyltkm('/mcpherson.json');
-                new Wyltkm('/tower.json');
+                new Wyltkm('mcpherson', '/mcpherson.json');
+                new Wyltkm('tower', '/tower.json');
             });
         </script>
     </head>
     <body>
-        <div id="wyltkm"/>
+        <div id="mcpherson" class="wyltkm"></div>
+        <div id="tower" class="wyltkm"></div/>
     </body>
 </html>

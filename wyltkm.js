@@ -1,16 +1,17 @@
 // Global
-var config;
 var DEFAULT_INTERVAL = 30;
 var PADDING = 10;
 var CANVAS_WIDTH = 480;
 var CANVAS_HEIGHT = 240;
 
 // Animation
-function Animate() {
+function Animate(root) {
     var decrement = 0;
     var images;
 
-    var canvas = document.getElementById("canvas");
+    var canvas = $('#' +root +' canvas').get(0);
+    canvas.width = CANVAS_WIDTH;
+    canvas.height = CANVAS_HEIGHT;
     var ctx = canvas.getContext("2d");
 
     var originX, originY, canvasY, farX;
@@ -22,7 +23,7 @@ function Animate() {
     };
 
     this.load = function() {
-        images = $('#preload img');
+        images = $('#' +root +' .preload img');
     };
 
     this.draw = function() {
@@ -37,7 +38,7 @@ function Animate() {
         }
 
         if (decrement-- <= -(imageWidths - CANVAS_WIDTH)) {
-            $("#footer").css("visibility", "visible");
+            $("#" +root +" .footer").css("visibility", "visible");
             return;
         }
 
@@ -50,28 +51,28 @@ function Animate() {
 };
 
 // UI
-function UI() {
+function UI(root, config) {
     var animate;
 
     var drawCanvas = function() {
-        $('#wyltkm').append($('<div id="preload"></div><div id="wrapper"><canvas id="canvas"></canvas></div>'));
+        $('#' +root).append($('<div class="preload"></div><div class="wrapper"><canvas class="canvas"></canvas></div>'));
 
-        $('#wyltkm #wrapper').append($('<div id="footer"><p><a href="https://github.com/richmidwinter">Would you like to know more?</a></p></div>'));
+        $('#' +root +' .wrapper').append($('<div class="footer"><p><a href="https://github.com/richmidwinter">Would you like to know more?</a></p></div>'));
     };
 
     var showStart = function() {
-        $('#wrapper').append($('<div id="start"><div id="circle"><div id="arrow"/></div></div>'));
+        $('#' +root +' .wrapper').append($('<div class="start"><div class="circle"><div class="arrow"/></div></div>'));
     };
 
     this.start = function() {
-        animate = new Animate();
+        animate = new Animate(root);
         animate.load();
         animate.draw();
 
-        $('#circle').click(function(e) {
+        $('#' +root +' .circle').click(function(e) {
             new Audio(config.audio).play();
 
-            $('#start').remove();
+            $('#' +root +' .start').remove();
 
             setInterval(function() { animate.draw(); }, config.interval || DEFAULT_INTERVAL);
         });
@@ -80,29 +81,24 @@ function UI() {
     this.init = function() {
         drawCanvas();
         showStart();
-
-        canvas.width = CANVAS_WIDTH;
-        canvas.height = CANVAS_HEIGHT;
     }
 };
 
 // Initialisation
-function Wyltkm(url) {
+function Wyltkm(root, url) {
     var waitCount = 0;
     var configReady = false;
-    var ui = new UI();
 
-    ui.init();
+    $.getJSON(url, function(config) {
+        var ui = new UI(root, config);
+        ui.init();
 
-    $.get(url, function(res) {
-        config = JSON.parse(res);
         for (var i = 0; i<config.frames.length; i++) {
-            $('#preload').append($("<img/>", { "id": "img" +i, "src": config.frames[i].src}));
+            $('#' +root +' .preload').append($("<img/>", { "id": root +"-img" +i, "src": config.frames[i].src}));
             waitCount++;
-            $('#img' +i).load(function() { waitCount--; });
+            $('#' +root +'-img' +i).load(function() { waitCount--; });
         }
         configReady = true;
-    });
 
     var timeout;
 
@@ -115,4 +111,7 @@ function Wyltkm(url) {
     };
 
     checkLoaded();
+
+    });
+
 };

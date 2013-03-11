@@ -1,19 +1,19 @@
-#wyltkm {
+.wyltkm {
     font-family: sans-serif;
 }
-#wyltkm * {
+.wyltkm * {
     padding: 0px;
     margin: 0px;
 }
-#wyltkm a {
+.wyltkm a {
     color: blue;
     text-decoration: none;
 }
-#wyltkm canvas {
+.wyltkm canvas {
     width: 480px;
     height: 240px;
 }
-#wyltkm #arrow {
+.wyltkm .arrow {
     width: 0px;
     height: 0px;
     border-top: 28px solid transparent;
@@ -23,7 +23,7 @@
     left: 224px;
     top: 94px;
 }
-#wyltkm #circle {
+.wyltkm .circle {
     border: 3px solid #fff;
     width: 80px;
     height: 80px;
@@ -32,17 +32,17 @@
     border-radius: 48px;
     cursor: pointer;
 }
-#wyltkm #footer {
+.wyltkm .footer {
     width: 100%;
     text-align: center;
     font-size: small;
     visibility: hidden;
     margin-top: 10px;
 }
-#wyltkm #preload {
+.wyltkm .preload {
     display: none;
 }
-#wyltkm #start {
+.wyltkm .start {
     background-color: rgba(200,200,200,0.6);
     width: 480px;
     height: 240px;
@@ -50,7 +50,7 @@
     top: 0px;
     left: 0px;
 }
-#wyltkm #wrapper {
+.wyltkm .wrapper {
     position: relative;
     border: 10px solid #ccc;
     width: 480px;
