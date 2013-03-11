@@ -31,12 +31,12 @@ function Animate() {
         canvasY = CANVAS_HEIGHT - (2 * PADDING);
         farX = 0;
 
-        var imageWidths = 0;
+        var imageWidths = PADDING;
         for (var i = 0; i<images.length; i++) {
             imageWidths += images[i].width*(canvasY/images[i].height) +PADDING;
         }
 
-        if (decrement-- <= -(imageWidths - (CANVAS_WIDTH + 2*PADDING))) {
+        if (decrement-- <= -(imageWidths - CANVAS_WIDTH)) {
             $("#footer").css("visibility", "visible");
             return;
         }
@@ -69,9 +69,9 @@ function UI() {
         animate.draw();
 
         $('#circle').click(function(e) {
-            $('#start').remove();
-
             new Audio(config.audio).play();
+
+            $('#start').remove();
 
             setInterval(function() { animate.draw(); }, config.interval || DEFAULT_INTERVAL);
         });
