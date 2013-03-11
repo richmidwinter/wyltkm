@@ -89,9 +89,8 @@ function Wyltkm(url) {
 
     ui.init();
 
-    $.get(url, function(res) {
-        //config = JSON.parse(res);
-config = res;
+    $.getJSON(url, function(res) {
+        config = res;
         for (var i = 0; i<config.frames.length; i++) {
             $('#preload').append($("<img/>", { "id": "img" +i, "src": config.frames[i].src}));
             waitCount++;
